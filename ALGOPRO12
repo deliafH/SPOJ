@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+	long long n,dem=1,i,dem1;
+	cin>>n; 
+	for(i=2;i*i<=n;i++) 
+  {
+		if(n%i==0)
+    {
+			dem1=0; 
+			while(n%i==0)
+      {
+				n/=i;
+				dem1++; 
+			} 
+			dem*=2*dem1+1; 
+		} 
+	}
+	if(n>1)dem*=3; 
+	cout<<dem;
+	return 0; 
+} 
